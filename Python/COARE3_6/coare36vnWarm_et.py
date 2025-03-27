@@ -1,3 +1,7 @@
+import numpy as np
+import COARE3_6.coare36vn_zrf_et as c36
+import os
+
 """
 Functions for COARE model version 3.6 bulk flux calculations with warm layer computations.
 
@@ -16,9 +20,7 @@ ludovic Bariteau, CU/CIRES, NOAA/ESRL/PSL
 v1: September 2022
 """
 
-import numpy as np
-import coare36vn_zrf_et as c36
-import os
+
 
 def coare36vnWarm_et(Jd, U, Zu, Tair, Zt, RH, Zq, P, Tsea, SW_dn, LW_dn, Lat, Lon, Zi, Rainrate, Ts_depth, Ss, cp=None, sigH=None,zrf_u = 10.0,zrf_t = 10.0,zrf_q = 10.0): 
     print('WarmCoolLayer')
