@@ -2,3 +2,5 @@
 .DocumentRevisions-V100
 .Spotlight-V100
 .Trashes
+*.egg-info
+*.pyc

@@ -1,0 +1,13 @@
+[project]
+name = "COARE"
+
+description = "Fork of official COARE algorithm modified for Python installation"
+readme = "README.md"
+version = "0.1.0"  # Specify version explicitly or manage dynamically
+
+dependencies = [
+  "numpy",  # Declare your dependencies here
+]
+
+[tool.setuptools.packages.find]
+where = ["Python"]
