@@ -9,6 +9,8 @@ Byron Blomquist, CU/CIRES, NOAA/ESRL/PSD3
 v1: Oct 2014
 """
 
+from COARE3_5.util import find
+
 def qsat(t,p):
     """
     usage: es = qsat(t,p)
@@ -148,7 +150,7 @@ def psit_26(z_L):
     Computes the temperature structure function given z/L.
     """
     from numpy import exp, log, sqrt, arctan, asarray, copy
-    from util import find
+    # from util import find
 
     zet = copy(asarray(z_L, dtype=float))    # conversion to ndarray float
     dzet = 0.35*zet
@@ -172,7 +174,7 @@ def psiu_26(z_L):
     Computes velocity structure function given z/L
     """
     from numpy import exp, log, sqrt, arctan, min, asarray, copy
-    from util import find
+    # from util import find
 
     zet = copy(asarray(z_L, dtype=float))    # conversion to ndarray float
     dzet = 0.35*zet
@@ -200,7 +202,7 @@ def psiu_40(z_L):
     Computes velocity structure function given z/L
     """
     from numpy import exp, log, sqrt, arctan, min, asarray, copy
-    from util import find
+    # from util import find
 
     zet = copy(asarray(z_L, dtype=float))    # conversion to ndarray float
     dzet = 0.35*zet
