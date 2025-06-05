@@ -494,7 +494,8 @@ def coare36vn_zrf_et(u, zu , t, zt, rh, zq, P, ts, sw_dn, lw_dn, lat, lon,jd, zi
         ik = np.array(np.where(rr[iice] > np.logical_and(0.135,rr[iice]) <= 2.5))
         rt[iice[ik]] = np.multiply(rr[iice[ik]],np.exp(0.149 - 0.55 * np.log(rr[iice[ik]])))
         rq[iice[ik]] = np.multiply(rr[iice[ik]],np.exp(0.351 - 0.628 * np.log(rr[iice[ik]])))
-        ik = np.array(np.where(rr[iice] > np.logical_and(2.5,rr[iice]) <= 1000))
+        # ik = np.array(np.where(rr[iice] > np.logical_and(2.5,rr[iice]) <= 1000))
+        ik = np.array(np.where((rr[iice] > 2.5) & (rr[iice] <= 1000))[0])
         rt[iice[ik]] = np.multiply(rr[iice[ik]],np.exp(0.317 - 0.565 * np.log(rr[iice[ik]]) - np.multiply(0.183 * np.log(rr[iice[ik]]),np.log(rr[iice[ik]]))))
         rq[iice[ik]] = np.multiply(rr[iice[ik]],np.exp(0.396 - 0.512 * np.log(rr[iice[ik]]) - np.multiply(0.18 * np.log(rr[iice[ik]]),np.log(rr[iice[ik]]))))
         # Dalton number is close to COARE 3.0 value
